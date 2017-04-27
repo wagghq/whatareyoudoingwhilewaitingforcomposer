@@ -80,7 +80,7 @@
         textarea {
             display: block;
             background: #222;
-            color: #fff
+            color: #fff;
             border: none;
             box-sizing: border-box;
             text-align: center;
