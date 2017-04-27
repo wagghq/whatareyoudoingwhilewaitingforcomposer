@@ -80,6 +80,7 @@
         textarea {
             display: block;
             background: #222;
+            color: #fff
             border: none;
             box-sizing: border-box;
             text-align: center;
@@ -99,6 +100,9 @@
         }
 
         button {
+            font-family: "Didot 24 A", "Didot 24 B", "Ryumin Regular KL", serif;
+            font-style: normal;
+            font-weight: 300;
             display: block;
             color: #fff;
             width: 100%;
