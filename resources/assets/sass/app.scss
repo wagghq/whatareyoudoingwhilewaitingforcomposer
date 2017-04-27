@@ -1,9 +1,270 @@
-
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-
 // Variables
-@import "variables";
+//@import "variables";
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+//@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import "node_modules/breakpoint-sass/stylesheets/breakpoint";
+
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Didot 16 A", "Didot 16 B", "Ryumin Regular KL", serif;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: .05em;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+
+h1 {
+
+  font-size: 1.5vw;
+  letter-spacing: 0.05vw;
+  margin: 0 0 2vw;
+  @include breakpoint($xs) {
+    font-size: 4vw;
+  }
+  @include breakpoint($sm) {
+    font-size: 3vw;
+  }
+  @include breakpoint($md) {
+    font-size: 2.5vw;
+  }
+  @include breakpoint($lg) {
+    font-size: 2vw;
+  }
+  @include breakpoint($xl) {
+    font-size: 1.5vw;
+  }
+
+  > span {
+    display: block;
+
+    font-family: "Didot 64 A", "Didot 64 B";
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 0.7vw;
+    @include breakpoint($xs) {
+      font-size: 12vw;
+      margin-top: 4vw;
+    }
+    @include breakpoint($sm) {
+      font-size: 11vw;
+      margin-top: 3vw;
+    }
+    @include breakpoint($md) {
+      font-size: 10vw;
+      margin-top: 2.5vw;
+    }
+    @include breakpoint($lg) {
+      font-size: 9vw;
+      margin-top: 2vw;
+    }
+    @include breakpoint($xl) {
+      font-size: 8vw;
+      margin-top: 1.5vm;
+    }
+  }
+}
+
+blockquote {
+  left: 0;
+  margin: 0;
+  position: fixed;
+  text-align: left;
+  top: 0;
+}
+
+blockquote > pre {
+  margin: 0;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 3vw;
+  @include breakpoint($sm) {
+    font-size: 2.5vw;
+  }
+  @include breakpoint($md) {
+    font-size: 2.25vw;
+  }
+  @include breakpoint($lg) {
+    font-size: 2vw;
+  }
+  @include breakpoint($lg) {
+    font-size: 1.75vw;
+  }
+  @include breakpoint($xl) {
+    font-size: 1.5vw;
+  }
+}
+
+blockquote > pre:last-child {
+  color: #00c120;
+}
+
+.container {
+  height: 100%;
+  margin: 0 auto;
+  @include breakpoint($xs) {
+    width: 90vw;
+  }
+  @include breakpoint($sm) {
+    width: 80vw;
+  }
+  @include breakpoint($md) {
+    width: 70vw;
+  }
+  @include breakpoint($lg) {
+    width: 60vw;
+  }
+  @include breakpoint($xl) {
+    width: 50vw;
+  }
+}
+
+form {
+  margin: 0 0 15vw;
+}
+
+textarea {
+  display: block;
+  background: #222;
+  color: #fff;
+  border: none;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+
+  font-family: "Didot 24 A", "Didot 24 B", "Ryumin Regular KL", serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2.5vw;
+  letter-spacing: .05em;
+
+  line-height: 1.5;
+
+  padding: 1vw;
+
+  outline: 0;
+}
+
+button {
+  font-family: "Didot 24 A", "Didot 24 B", "Ryumin Regular KL", serif;
+  font-style: normal;
+  font-weight: 300;
+  display: block;
+  color: #fff;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  background: #333;
+  letter-spacing: .05em;
+  -webkit-appearance: none;
+  outline: 0;
+  transition-duration: .5s;
+  font-size: 2vw;
+  padding: 1vw;
+}
+button:hover {
+  background: #444;
+}
+
+.post {
+  &__body {
+    font-family: "Didot 24 A", "Didot 24 B", "Ryumin Regular KL", serif;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: .05em;
+    line-height: 1.5;
+    margin: 0 0 1.5em;
+    @include breakpoint($xs) {
+      font-size: 5vw;
+    }
+    @include breakpoint($sm) {
+      font-size: 4vw;
+    }
+    @include breakpoint($md) {
+      font-size: 3vw;
+    }
+    @include breakpoint($lg) {
+      font-size: 2.5vw;
+    }
+    @include breakpoint($xl) {
+      font-size: 2vw;
+    }
+  }
+  &__github-link {
+    font-family: "Didot 16 A", "Didot 16 B";
+    color: #666;
+    text-decoration: none;
+    border-bottom: 1px solid #555;
+    @include breakpoint($xs) {
+      font-size: 4vw;
+    }
+    @include breakpoint($sm) {
+      font-size: 3vw;
+    }
+    @include breakpoint($md) {
+      font-size: 2vw;
+    }
+    @include breakpoint($lg) {
+      font-size: 2vw;
+    }
+    @include breakpoint($xl) {
+      font-size: 1.5vw;
+    }
+  }
+}
+
+.filler {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &:not(:last-child):after {
+    background-color: #fff;
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -0.5vw;
+    width:1vw;
+  }
+}
+
+.connect {
+  @include breakpoint($xs) {
+    font-size: 6vw;
+  }
+  @include breakpoint($sm) {
+    font-size: 3vw;
+  }
+  @include breakpoint($md) {
+    font-size: 2.5vw;
+  }
+  @include breakpoint($lg) {
+    font-size: 2vw;
+  }
+  @include breakpoint($xl) {
+    font-size: 1.5vw;
+  }
+  background: #333;
+  color: #fff;
+  padding: 1em 2em;
+  text-decoration: none;
+  transition-duration: .5s;
+}
