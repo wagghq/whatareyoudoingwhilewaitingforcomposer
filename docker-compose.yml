@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  nginx:
+    build: ./nginx/.
+    ports:
+      - '80:80'
+    volumes_from:
+      - laravel
+  mariadb:
+      image: mariadb:10.1.22
+      environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: whatareyoudoingwhilewaitingforcomposer
+      ports:
+        - '3306:3306'
+      volumes:
+            - .mariadb:/var/lib/mysql
+  laravel:
+    build: .
+    volumes:
+      - .:/laravel
