@@ -39,7 +39,7 @@ Updating dependencies (including require-dev)
         <div class="filler">
             <a class="connect" href="/connect">Let the world know</a>
         </div>
-    @endif
+    @else
         <div class="filler">
             <form method="post" action="/post/store">
                 {{ csrf_field() }}
@@ -47,7 +47,7 @@ Updating dependencies (including require-dev)
                 <button>Let the world know</button>
             </form>
         </div>
-
+    @endif
 
     @foreach ($posts as $post)
         <div class="filler">
