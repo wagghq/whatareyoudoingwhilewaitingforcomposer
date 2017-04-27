@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="https://cloud.typography.com/6830252/7572172/css/fonts.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
     <style>
         html {
             height: 100%;
@@ -61,6 +62,7 @@
         }
         blockquote > pre {
             margin: 0;
+            font-family: 'Ubuntu Mono', monospace;
         }
         blockquote > pre:last-child {
             color: #00c120;
@@ -98,6 +100,7 @@
 
         button {
             display: block;
+            color: #fff;
             width: 100%;
             border: none;
             border-radius: 0;
@@ -147,6 +150,18 @@
             font-size: 1.5vw;
             letter-spacing: .05em;
         }
+
+        .connect {
+            margin-top: -40vh;
+            display: block;
+            background: #333;
+            color: #fff;
+            letter-spacing: .05em;
+            transition-duration: .5s;
+            font-size: 2vw;
+            padding: 1vw 4vw;
+            text-decoration: none;
+        }
     </style>
     <script src="//webfont.fontplus.jp/accessor/script/fontplus.js?JItqYG3JnkE%3D&box=PkIVeFGe~ik%3D&aa=1"></script>
 </head>
@@ -171,7 +186,7 @@ Updating dependencies (including require-dev)
 
 <div class="container">
     @if (!Auth::check())
-        <a href="/connect">Login</a>
+        <a class="connect" href="/connect">Let the world know</a>
     @else
         <form method="post" action="/post/store">
             {{ csrf_field() }}
