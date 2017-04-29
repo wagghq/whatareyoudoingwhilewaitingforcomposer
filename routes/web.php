@@ -44,7 +44,7 @@ Route::get('/connect/callback', function () {
 
     Auth::login($user);
 
-    return redirect('/');
+    return redirect('/#form');
 });
 
 Route::post('/post/store', function (Request $request) {

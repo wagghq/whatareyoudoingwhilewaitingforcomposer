@@ -54,7 +54,7 @@ Updating dependencies (including require-dev)
             <a class="connect" href="/connect">Let the world know</a>
         </div>
     @else
-        <div class="filler">
+        <div class="filler" id="form">
             <form method="post" action="/post/store">
                 {{ csrf_field() }}
                 <textarea name="body" placeholder="You wouldn’t say nothing…" rows="3" required maxlength="100"></textarea>
