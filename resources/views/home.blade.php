@@ -55,7 +55,7 @@
 
     @if (!Auth::check())
         <div class="filler">
-            <a class="connect" href="/connect">Let the world know</a>
+            <a class="connect" href="/connect">An idea what to do?</a>
         </div>
     @else
         <div class="filler" id="form">
