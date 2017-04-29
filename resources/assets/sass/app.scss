@@ -91,7 +91,7 @@ blockquote {
   top: 0;
 }
 
-blockquote > pre {
+.commandline {
   margin: 0;
   font-family: 'Ubuntu Mono', monospace;
   font-size: 3vw;
@@ -110,11 +110,18 @@ blockquote > pre {
   @include breakpoint($xl) {
     font-size: 1.5vw;
   }
+  &__input {
+    display: block;
+  }
+  &__output {
+    color: #00c120;
+    display: block;
+    > span {
+      display: none;
+    }
+  }
 }
 
-blockquote > pre:last-child {
-  color: #00c120;
-}
 
 .container {
   height: 100%;

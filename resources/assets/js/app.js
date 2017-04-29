@@ -7,16 +7,26 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+var $commendlineInput = $('#commandline-input');
+var $commandlineOutput1 = $('#commandline-output-1');
+var $commandlineOutput2 = $('#commandline-output-2');
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+function typing($el, text, n) {
+    if (n < text.length) {
+        $el.text(text.substring(0, n + 1));
+        n++;
+        setTimeout(function() {
+            typing($el, text, n)
+        }, 100);
+    } else {
+        setTimeout(function () {
+            $commandlineOutput1.show();
+            setTimeout(function () {
+                $commandlineOutput2.show();
+            }, 2000);
+        }, 1000);
+    }
+}
 
-Vue.component('example', require('./components/Example.vue'));
 
-const app = new Vue({
-    el: '#app'
-});
+typing($commendlineInput, '$ composer update', 1);

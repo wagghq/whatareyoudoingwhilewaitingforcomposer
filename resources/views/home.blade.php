@@ -4,10 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>What are you doing while waiting for Composer?</title>
-    <meta name="description" content="">
+    <meta name="description" content="Composer is awesome, but slow. What to do while waiting for it?">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="https://cloud.typography.com/6830252/7572172/css/fonts.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
@@ -18,12 +16,12 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<blockquote>
-    <pre>$ composer update</pre>
-    <pre>
-Loading composer repositories with package information
-Updating dependencies (including require-dev)
-      </pre>
+<blockquote class="commandline">
+    <span class="commandline__input" id="commandline-input"></span>
+    <span class="commandline__output">
+        <span id="commandline-output-1">Loading composer repositories with package information</span><br>
+        <span id="commandline-output-2">Updating dependencies (including require-dev)
+    </span>
 </blockquote>
 
 <div class="filler">
@@ -82,5 +80,6 @@ Updating dependencies (including require-dev)
     ga('send', 'pageview');
 
 </script>
+<script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>
