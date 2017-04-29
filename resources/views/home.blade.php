@@ -9,7 +9,7 @@
     <meta property="og:title" content="What are you doing while waiting for Composer?" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://whatareyoudoingwhilewaitingforcomposer.com/" />
-    <meta property="og:image" content="サムネイル画像のURL" />
+    <meta property="og:image" content="https://whatareyoudoingwhilewaitingforcomposer.com/og.png" />
     <meta property="og:site_name" content="What are you doing while waiting for Composer?" />
     <meta property="og:description" content="Composer is awesome, but slow. What to do while waiting for it?" />
     <link rel="stylesheet" href="https://cloud.typography.com/6830252/7572172/css/fonts.css">
