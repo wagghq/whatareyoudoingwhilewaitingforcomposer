@@ -35,6 +35,20 @@ Updating dependencies (including require-dev)
 </div>
 
 <div class="container">
+    <div class="filler">
+        <div class="message">
+            <p class="message__paragraph">
+                Package management with <a href="https://getcomposer.org/" target="_blank">Composer</a> has saved our life.
+                Yes, it has brought us PHP developers to the next level.
+            </p>
+            <p class="message__paragraph">
+                Even if it is so slow, we should’t be complaining about it while waiting for it.
+                Instead, close your eyes, seat back and get relaxed… no, it’s too long! What to do then?
+            </p>
+            <p class="message__paragraph">Look at the left top. What are you doing?</p>
+        </div>
+    </div>
+
     @if (!Auth::check())
         <div class="filler">
             <a class="connect" href="/connect">Let the world know</a>
