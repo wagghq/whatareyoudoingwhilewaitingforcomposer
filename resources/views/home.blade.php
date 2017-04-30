@@ -46,7 +46,7 @@
                 Yes, it has brought us PHP developers to the next level.
             </p>
             <p class="message__paragraph">
-                Even if it is so slow, we should’t be complaining about it while waiting for it.
+                Even if it is so slow, we shouldn’t be complaining about it while waiting for it.
                 Instead, close your eyes, seat back and get relaxed… no, it’s too long! What to do then?
             </p>
             <p class="message__paragraph">Look at the left top. What are you doing?</p>
@@ -55,7 +55,7 @@
 
     @if (!Auth::check())
         <div class="filler">
-            <a class="connect" href="/connect">An idea what to do?</a>
+            <a class="connect" href="/connect">Any idea what to do?</a>
         </div>
     @else
         <div class="filler" id="form">
